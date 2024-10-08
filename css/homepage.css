@@ -1,0 +1,1830 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Times New Roman, Times, serif;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+html {
+  padding-top: 120px;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.fixed-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.details {
+  background-color: rgb(69, 72, 110);
+  color: white;
+  width: 100%;
+  padding: 15px 80px;
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  height: 70px;
+}
+
+.details .opening {
+  display: none;
+}
+
+.social-media i {
+  padding: 7px 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 80px;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border-bottom: 3px solid rgb(97, 100, 146);
+  border-radius: 70px;
+}
+
+.button-div {
+  display: flex;
+}
+
+.button-div .button {
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 50px;
+  transition: 0.25s;
+  padding: 5px 25px;
+}
+
+.button-div .button:hover {
+  background-color: rgb(69, 72, 110);
+  color: white;
+}
+
+.cta {
+  position: relative;
+  padding: 8.5px 15px;
+  transition: all 0.2s ease;
+  border: 3px solid rgb(69, 72, 110);
+  border-radius: 50px;
+  background: rgb(69, 72, 110);
+  align-self: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  display: block;
+  border-radius: 50px;
+  background: white;
+  width: 40px;
+  height: 40px;
+  transition: all 0.8s ease;
+}
+
+.cta span {
+  position: relative;
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: white;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.5s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #1c1c1c;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+  transition: all 2s ease;
+}
+
+.cta:active {
+  transform: scale(0.95);
+  transition: all 2s ease;
+}
+
+.second-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  visibility: hidden;
+}
+
+.second-header .name {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Roboto, Times New Roman, Times, serif;
+}
+
+.second-header .contact-us {
+  border: none;
+  align-self: center;
+  background-color: rgb(69, 72, 110);
+  color: white;
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.second-header .contact-us:hover {
+  background-color: rgb(61, 64, 104);
+}
+
+.caregiver-image {
+  width: 100%;
+  height: 500px;
+}
+
+.first-intro {
+  position: relative;
+  width: 100%;
+}
+
+.introduction {
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  color: white;
+  width: 400px;
+}
+
+.name {
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 40px;
+}
+
+.write-up {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.write-up-container {
+  display: flex;
+  position: absolute;
+  margin: auto;
+  bottom: -100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.first-div, .second-div, .third-div {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  background-color: rgb(69, 72, 110);
+  width: 270px;
+  color: white;
+  padding-left: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.second-div {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgb(97, 100, 146);
+}
+
+.third-div {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgb(121, 125, 173);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.icon {
+  background-color: rgb(196, 171, 171);
+  text-align: center;
+  align-content: center;
+  border-radius: 50px;
+  width: 60px;
+  height: 50px;
+  align-self: center;
+}
+
+.bt-icon {
+  color: white;
+  font-size: 30px;
+}
+
+.text {
+  padding: 10px;
+  line-height: 20px;
+}
+
+.head {
+  color: rgb(207, 192, 192);
+  font-size: 12px;
+  margin-bottom: -2px;
+}
+
+.tips-div {
+  padding: 120px 80px;
+  display: flex;
+}
+
+.tips-div img {
+  width: 50%;
+  height: 520px;
+  align-self: center;
+}
+
+.tips-div h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.tips-write-up {
+  width: 50%;
+  padding: 0 40px;
+}
+
+.type-of-care {
+  background-color: rgb(250, 244, 244);
+  width: 100%;
+  padding: 120px 80px;
+  text-align: center;
+}
+
+.type-of-care h2 {
+  margin-top: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.type-of-care-div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+
+.home-service {
+  padding: 10px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+  border-bottom: 8px solid rgb(69, 72, 110);
+}
+
+.home-service .button {
+  background-color: rgb(69, 72, 110);
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  color: white;
+  padding: 1px 5px 1px 5px;
+  transition: 0.25s;
+  border: none;
+ 
+}
+
+.home-service .button:hover{
+  background-color: rgba(35, 35, 35, 0.9);
+  color: white;
+
+}
+
+
+.home-service img {
+  width: 100%;
+  height: 170px;
+}
+
+.home-service h5 {
+  margin-top: 30px;
+  font-weight: bold;
+  color: rgb(69, 72, 110);
+}
+
+.home-service p {
+  font-size: 15px;
+}
+
+.about-us {
+  background-color: white;
+  padding: 150px 80px 80px 80px;
+}
+
+.about-us h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.image-and-write-up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.image-and-write-up img {
+  width: 100%;
+  height: 400px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.about-us-write-up {
+  padding: 0 40px;
+  line-height: 25px;
+}
+
+.list {
+  display: flex;
+  align-items: baseline;
+  column-gap: 10px;
+  line-height: 12px;
+}
+
+.first-review {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  width: 100%;
+  padding: 80px 120px;
+}
+
+.first-review .reviews {
+  padding: 25px 80px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 15px;
+  border-radius: 20px;
+  border-bottom: 3px solid rgb(69, 72, 110);
+}
+
+.first-review .reviews p {
+  color: rgb(69, 72, 110);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.first-review.reviews small {
+  font-weight: bold;
+}
+
+.rating-container {
+  padding: 0px;
+  position: relative;
+}
+
+.rating-container img {
+  width: 100%;
+}
+
+.rating {
+  display: flex;
+  position: absolute;
+  top: 480px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.first-rating-div {
+  background-color: rgb(69, 72, 110);
+  color: white;
+  padding: 30px 30px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 400px;
+}
+
+.first-rating-div strong {
+  font-size: 20px;
+}
+
+.first-rating-div p {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  line-height: 22px;
+}
+
+.first-rating-div a {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: 0.25s;
+}
+
+.first-rating-div a:hover {
+  background-color: rgba(35, 35, 35, 0.9);
+}
+
+.second-rating-div {
+  color: black;
+  padding: 30px 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 400px;
+  background-color: rgb(250, 244, 244);
+}
+
+.second-rating-div .quote {
+  line-height: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.second-rating-div .rating-image {
+  width: 90px;
+  height: 40px;
+}
+
+.profile {
+  display: flex;
+}
+
+.profile img {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+}
+
+.profile-name {
+  line-height: 5px;
+  align-content: center;
+  margin-left: 20px;
+}
+
+.caregiver {
+  margin-top: 200px;
+  background-color: rgb(250, 244, 244);
+  text-align: center;
+  padding: 150px 80px 80px 80px;
+}
+
+.caregiver h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.care-giver-definition {
+  margin-bottom: 50px;
+}
+
+.second-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.second-container img {
+  width: 100%;
+  height: 400px;
+}
+
+.ii {
+  position: absolute;
+  top: 170px;
+  left: 50px;
+  right: 50px;
+  text-align: left;
+}
+
+.qualifications {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.worker-qualifications{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.at-the{
+  background-color: rgba(49, 53, 109, 0.5);
+  padding: 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.booking {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  margin-top: 80px;
+}
+
+.booking-and-image {
+  display: flex;
+  position: relative;
+  height: 440px;
+}
+
+.booking-and-image img {
+  width: 100%;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+
+.booking .book-now {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 130px 60px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: white;
+  line-height: 10px;
+}
+
+.booking .book-now h3 {
+  margin-top: 30px;
+}
+
+.booking .book-now p {
+  margin-top: 30px;
+}
+
+.booking .button {
+  background-color: rgb(69, 72, 110);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  align-content: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+  transition: 0.25s;
+  border: none;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+
+.booking .button:hover{
+  background-color: rgba(35, 35, 35, 0.9);
+  color: white;
+
+}
+
+.process {
+  padding: 0px 20px 20px 20px;
+  text-align: left;
+  position: relative;
+}
+
+.process h4 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.process-container {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 20px;
+} 
+
+.process-container p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.process .p{
+  padding: 10px 30px;
+  background-color: rgb(69, 72, 110);
+  color: white;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.quality-trust{
+  background-color: rgb(97, 100, 146);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 80px;
+  vertical-align: middle;
+}
+
+.quality-trust a{
+  background-color: black;
+  padding: 12px 24px;
+  border-radius: 50px;
+  align-self: center;
+  text-decoration: none;
+  color: white;
+}
+
+.quality-trust p{
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer {
+  background-color: rgb(69, 72, 110);
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr;
+  column-gap: 100px;
+  padding: 30px 80px 5px 80px;
+  color: white;
+  font-size: 15px;
+}
+
+.logothree {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-bottom: 3px solid rgb(97, 100, 146);
+  border-radius: 70px;
+}
+
+.logotwo {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  margin-left: 15px;
+  
+}
+
+.quick-link-container p, 
+.get-in-touch .get-in-touch-head {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.quick-link-container a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.quick-link-container div {
+  margin-bottom:10px;
+}
+
+.contact {
+  margin-bottom: 20px;
+}
+
+.contact i {
+  margin-right: 10px;
+}
+
+.copyright {
+  text-align: center;
+  background-color: rgb(69, 72, 110);
+  color: white;
+  padding: 5px 80px 20px;
+}
+
+@media (max-width: 1200px) {
+  .details .opening {
+    display: none;
+  }
+
+  .footer {
+    background-color: rgb(69, 72, 110);
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    column-gap: 80px;
+    padding: 30px 80px 5px 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact {
+    margin-bottom: 0px;
+  }
+
+  .details .contact {
+    width: 400px;
+    font-size: 14px;
+  }
+
+  .details .opening {
+    display: none;
+  }
+
+  .social-media {
+    margin-left: 20px;
+  }
+
+  .social-media i {
+    padding: 5px 6px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 80px;
+    background-color: white;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-bottom: 3px solid rgb(97, 100, 146);
+    border-radius: 70px;
+  }
+  
+  .button-div {
+    display: flex;
+  }
+  
+  .button-div .button {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+  
+  .cta {
+    padding: 6.5px 10px;
+    border: 2px solid rgb(69, 72, 110);
+  }
+  
+  .cta:before {
+    top: 4px;
+    right: 4px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .cta span {
+    font-size: 13px;
+  }
+
+  .introduction {
+    top: 160px;
+  }
+  
+  .name {
+    font-size: 45px;
+    line-height: 35px;
+  }
+  
+  .write-up {
+    font-size: 14px;
+  }
+  
+  .first-div, .second-div, .third-div {
+    width: 200px;
+    padding-left: 15px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 14px;
+  }
+
+  .first-div .icon {
+    border-radius: 50px;
+    height: 40px;
+    width: 60px;
+  }
+  
+  .second-div {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .third-div {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 40px;
+  }
+  
+  .bt-icon {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .text {
+    padding: 10px;
+    line-height: 15px;
+  }
+  
+  .head {
+    margin-bottom: 4px;
+  }
+
+  .tips-div {
+    padding: 100px 80px;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  
+  .tips-div img {
+    width: 100%;
+    height: 520px;
+    display: block;
+  }
+  
+  .tips-write-up {
+    margin-top: 40px;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .tips-div h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .tips-write-up p {
+    margin-bottom: 7px;
+  }
+
+  .type-of-care {
+    padding: 120px 80px;
+  }
+  
+  .type-of-care h2 {
+    margin-bottom: 25px;
+  }
+
+  .type-of-care h4 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .home-service p {
+    font-size: 14px;
+  }
+  
+  .type-of-care-div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
+  
+  .home-service {
+    margin-top: 20px;
+    border-bottom: 5px solid rgb(69, 72, 110);
+  }
+
+  .home-service h5 {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .about-us {
+    background-color: white;
+    padding: 150px 80px 80px 80px;
+  }
+  
+  .about-us h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-and-write-up {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .image-and-write-up img {
+    display: none;
+  }
+  
+  .about-us-write-up {
+    padding: 0 40px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .why-choose-us {
+    margin-top: -60px;
+  }
+
+  .why-choose-us h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .why-choose-us .first-write-up, .second-write-up {
+    text-align: center;
+  }
+
+  .first-review {
+    display: flex;
+    padding: 80px 80px;
+    justify-content: center;
+    column-gap: 20px;
+  }
+  
+  .first-review .reviews {
+    width: 300px;
+  }
+  
+  .first-review .reviews p {
+    font-size: 25px;
+  }
+
+  .rating {
+    top: 350px;
+  }
+
+  .first-rating-div {
+    padding: 25px;
+    width: 300px;
+    font-size: 15px;
+  }
+
+  .first-rating-div strong {
+    font-size: 18px;
+  }
+
+  .first-rating-div p {
+    margin-top: 18px;
+    margin-bottom: 25px;
+    line-height: 20px;
+  }
+
+  .second-rating-div {
+    padding: 25px;
+    width: 300px;
+  }
+
+  .second-rating-div .quote {
+    line-height: 18px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+    font-size: 15px;
+  }
+
+  .ii {
+    top: 130px;
+    left: 40px;
+    right: 40px;
+  }
+  
+  .worker-qualifications{
+    font-size: 25px;
+  }
+  
+  .at-the{
+    background-color: rgba(49, 53, 109, 0.5);
+    padding: 15px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .booking {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    margin-top: 80px;
+  }
+  
+  .booking-and-image {
+    height: 400px;
+  }
+
+  
+  .booking .book-now {
+    padding: 130px 0px;
+    line-height: 5px;
+  }
+  
+  .booking .button {
+    font-size: 15px;
+  }
+
+  .process {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .quality-trust{
+    padding: 5px 80px;
+  }
+
+  .quality-trust p{
+    font-size: 25px;
+  }
+  
+  .quality-trust a{
+    padding: 12px 20px;
+    font-size: 15px;
+    width: 120px;
+    margin-left: 40px;
+    text-align: center;
+  }
+
+  .footer {
+    background-color: rgb(69, 72, 110);
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    padding: 30px 80px 5px 80px;
+    font-size: 14px;
+  }
+
+  .intro {
+    margin-right: 40px;
+  }
+  
+  .logothree {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(97, 100, 146);
+    border-radius: 70px;
+  }
+  
+  .logotwo {
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: -10px;
+  }
+  
+  .quick-link-container a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .quick-link-container div {
+    margin-bottom:10px;
+  }
+
+  .get-in-touch {
+    margin-top: 20px;
+  }
+  
+  .contact {
+    margin-bottom: 20px;
+  }
+  
+  .social-media {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .social-media p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer hr {
+    display: none;
+  }
+  
+  .copyright {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .fixed-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .details {
+    padding: 15px 30px;
+    font-size: 12px;
+    height: 50px;
+  }
+
+  .details .contact {
+    display: none;
+  }
+
+  .details .opening {
+    display: block;
+  }
+
+  .social-media {
+    margin-left: 15px;
+  }
+  
+  .social-media i {
+    padding: 5px 6px;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .second-header {
+    height: 60px;
+    padding: 0 30px;
+    visibility: visible;
+  }
+  
+  .second-header .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .second-header .name {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .second-header .contact-us {
+    padding: 8px 18px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .cta {
+    display: none;
+  }
+
+  .first-intro {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .first-intro .caregiver-image {
+    height: 300px;
+  }
+
+  .introduction {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: white;
+    width: 400px;
+  }
+  
+  .name {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 20px;
+  }
+  
+  .write-up {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
+  }
+
+  .write-up-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0px 30px;
+  }
+  
+  .first-div, .second-div, .third-div {
+    background-color: rgb(69, 72, 110);
+    color: white;
+    padding-left: 20px;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .second-div {
+    border-radius: 20px;
+    background-color: rgb(97, 100, 146);
+  }
+  
+  .third-div {
+    border-radius: 20px;
+    background-color: rgb(121, 125, 173);
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .first-div .services-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .bt-icon {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .text {
+    padding: 10px;
+    line-height: 20px;
+  }
+  
+  .head {
+    color: rgb(207, 192, 192);
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .tips-div {
+    padding: 290px 30px 20px 30px;
+    display: block;
+  }
+  
+  .tips-div img {
+    display: none;
+  }
+
+  .tips-write-up {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .tips-div h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .tips-write-up p {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .type-of-care {
+    background-color: rgb(250, 244, 244);
+    width: 100%;
+    padding: 40px 30px;
+    text-align: center;
+  }
+  
+  .type-of-care h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .type-of-care p {
+    font-size: 15px;
+  }
+  
+  .type-of-care-div {
+    grid-template-columns: 1fr 1fr;
+    margin-top: -10px;
+  }
+  
+  .home-service {
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    text-align: center;
+  }
+   
+  .home-service img {
+    width: 100%;
+    height: 170px;
+  }
+  
+  .home-service p {
+    font-size: 15px;
+  }
+
+  .about-us {
+    background-color: white;
+    padding: 40px;
+  }
+  
+  .about-us h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .image-and-write-up {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    text-align: left;
+  }
+  
+  .image-and-write-up img {
+    display: none;
+  }
+  
+  .about-us-write-up {
+    padding: 0px;
+    line-height: 25px;
+    text-align: justify;
+  }
+
+  .why-choose-us h3 {
+    font-size: 20px;
+  }
+
+  .why-choose-us p {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .why-choose-us .first-write-up {
+    text-align: justify;
+  }
+
+  .first-review {
+    display: flex;
+    padding: 40px 80px;
+    justify-content: center;
+    column-gap: 20px;
+  }
+  
+  .first-review .reviews {
+    width: 200px;
+    font-size: 15px;
+    padding: 20px;
+  }
+  
+  .first-review .reviews p {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }  
+
+  .rating {
+    display: grid;
+    grid-template-columns: 1fr;
+    top: 400px;
+    row-gap: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    width: 100%;
+  }
+  
+  .first-rating-div {
+    background-color: rgb(69, 72, 110);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 15px;
+    height: 230px;
+  }
+  
+  .first-rating-div strong {
+    font-size: 20px;
+  }
+  
+  .first-rating-div p {
+    margin-top: 10px;
+    margin-bottom: 22px;
+    line-height: 20px;
+  }
+  
+  .second-rating-div {
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: rgb(250, 244, 244);
+    height: 230px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  .second-rating-div .quote {
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  
+  .second-rating-div .rating-image {
+    width: 80px;
+    height: 30px;
+  }
+  
+  .profile {
+    display: flex;
+  }
+  
+  .profile img {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .profile-name {
+    font-size: 15px;
+  }
+
+  .caregiver {
+    margin-top: 350px;
+    background-color: rgb(250, 244, 244);
+    text-align: justify;
+    padding: 150px 30px 80px 30px;
+  }
+  
+  .caregiver h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .care-giver-definition {
+    margin-bottom: 40px;
+    font-size: 15px
+  }
+
+  .second-container {
+    width: 100%;
+    height: 400px;
+    padding: 0;
+  }
+  
+  .second-container img {
+    width: 100%;
+    height: 350px;
+  }
+  
+  .ii {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    right: 20px;
+    text-align: left;
+  }
+  
+  .worker-qualifications{
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .at-the{
+    font-size: 15px;
+  }
+
+  .booking {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  
+  .booking-and-image {
+    height: 100%;
+  }
+  
+  .booking .book-now h3 {
+    margin-top: -20px;
+  }
+  
+  .booking .book-now p {
+    margin-top: 20px;
+  }
+  
+  .booking .button {
+    font-size: 15px;
+    border: none;
+    padding: 15px 20px;
+    margin-top: 20px;
+  }
+  
+  .process {
+    padding: 0px;
+  }
+  
+  .process h4 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .process-container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    line-height: 18px;
+  } 
+  
+  .process .p{
+    padding: 8px 20px;
+  }
+  
+  .quality-trust{
+    padding: 10px 30px;
+    height: 60px;
+    align-items: center;
+  }
+
+  .quality-trust p{
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  
+  .quality-trust a{
+    padding: 10px 18px;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100px;
+    margin-left: 40px;
+  }
+
+  .footer {
+    column-gap: 30px;
+    padding: 30px 30px 5px 30px;
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .intro {
+    margin-right: 0px;
+  }
+  
+  .logothree {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .logotwo {
+    width: 50px;
+    height: 50px;
+    margin-top: -22px;
+  }
+
+  .get-in-touch {
+    margin-top: 10px;
+  }
+
+  .contact {
+    margin-bottom: 20px;
+  }
+  
+  .social-media {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .social-media p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .copyright {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .type-of-care-div {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+  }
+  
+  .first-rating-div {
+    background-color: rgb(69, 72, 110);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 15px;
+    height: 270px;
+  }
+  
+  .second-rating-div {
+    height: 230px;
+  }
+}
+
+@media (max-width: 450px) {
+  .social-media i {
+    padding: 0px 0px;
+    font-size: 10px;
+    margin-right: 5px;
+    background-color: transparent;
+  }
+
+  .second-header {
+    height: 60px;
+    padding: 0 30px;
+    visibility: visible;
+  }
+  
+  .second-header .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .second-header .name {
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .second-header .contact-us {
+    padding: 6px 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .introduction {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: white;
+    width: 330px;
+  }
+  
+  .name {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 15px;
+  }
+  
+  .write-up {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
+  }
+
+  .write-up-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0px 30px;
+  }
+
+  .first-rating-div {
+    background-color: rgb(69, 72, 110);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 15px;
+    height: 360px;
+  }
+  
+  .second-rating-div {
+    height: 280px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  .caregiver {
+    margin-top: 450px;
+    background-color: rgb(250, 244, 244);
+    text-align: justify;
+    padding: 150px 30px 80px 30px;
+  }
+
+
+  .ii {
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    right: 5px;
+    text-align: left;
+    color: white;
+  }
+  
+  .worker-qualifications{
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+  }
+  
+  .at-the{
+    font-size: 15px;
+  }
+
+  .booking {
+    grid-template-columns: 1fr;
+    row-gap: 80px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  
+  .booking-and-image {
+    height: 100%;
+  }
+
+  .booking .book-now {
+    padding: 20px;
+    line-height: 20px;
+  }
+  
+  .booking .book-now h3 {
+    margin-top: 8px;
+  }
+  
+  .booking .book-now p {
+    margin-top: 10px;
+  }
+  
+  .booking .button {
+    font-size: 15px;
+    border: none;
+    padding: 10px 18px;
+    margin-top: 0px;
+  }
+
+  .quality-trust p{
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .quality-trust a{
+    padding: 6px 12px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    padding: 8px 0px;
+  }
+}
